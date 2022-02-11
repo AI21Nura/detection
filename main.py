@@ -4,7 +4,7 @@ import os
 from torch_utils import predict
 
 app = Flask(__name__)
-
+app.secret_key = os.environ.get('SECRET_KEY', 'dev')
 UPLOAD_FOLDER = 'static/uploads/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
