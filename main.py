@@ -29,6 +29,8 @@ def upload():
         try:
             filename = secure_filename(file.filename)
             img_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            if not os.path.exists(app.config['UPLOAD_FOLDER']):
+                os.makedirs(app.config['UPLOAD_FOLDER'])
             file.save(img_path)
             new_filename = predict(img_path)
             return render_template('index.html', filename_1=filename, filename_2 = new_filename)
