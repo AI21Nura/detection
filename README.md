@@ -1,6 +1,9 @@
 # detection
 Project for DLS course
 
+# DetectionProj.ipynb
+Jupyter Notebook describes the stages of work
+
 # See on Heroku
 https://detectionproj.herokuapp.com/
 
